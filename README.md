@@ -9,7 +9,7 @@ to whatever amount of time you want.
 ### Dependencies
 This script depends on xsel for the clipboard functionality.
 To properly install it, open a terminal in the _template_ for the qube you want to 
-install this script. Then used the following command:
+install this script. Then use the following command:
 
 >sudo apt install xsel
 
