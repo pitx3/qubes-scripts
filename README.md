@@ -5,7 +5,7 @@ there is no guarantee of this.
 
 **Use these at your own risk**
 
-## clipboard clearing
+## clipboard clearing (cbclear.sh)
 This script will automatically clear the clipboard after a specified amount of time
 from whenever the clipboard changes. The default is 20 seconds. The script is easily changed
 to whatever amount of time you want.
