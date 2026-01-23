@@ -1,5 +1,9 @@
 # qubes-scripts
-Collection of helpful scripts for use with the Qubes operating system
+Collection of helpful scripts for use with the Qubes operating system. 
+These scripts are designed specifically for Qubes. And although they may work in other situations,
+there is no guarantee of this. 
+
+**Use these at your own risk**
 
 ## clipboard clearing
 This script will automatically clear the clipboard after a specified amount of time
