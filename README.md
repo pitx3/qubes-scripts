@@ -21,6 +21,8 @@ Once installed, shut down the template and restart the qube before beginning ins
 
 ### Installation
 There are two steps to install the clipboard clearing script so that it automatically runs.
+All installation takes place on the specific qube you want to automatically clear the clipboard.
+Do *not* do this on the template. You won't get the desired results.
 
 First, add the cbclear.sh file to /home/user. Be sure it has execute permissions.
 
