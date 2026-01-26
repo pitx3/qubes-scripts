@@ -15,8 +15,9 @@
 
 echo "Running..."
 
-OLDCONTENTS=""
 CONTENTS=""
+CONTENTSHASH=""
+OLDCONTENTSHASH=""
 
 # Number of seconds before clearing the clipboard
 cleartime=20
@@ -41,15 +42,18 @@ do
   # Formatted date for logging
   dt=$(date +"%Y-%m-%d %T")
 
-  OLDCONTENTS=$CONTENTS
+  OLDCONTENTSHASH=$CONTENTSHASH
 
-  # Get the current clipboard contents
+  # Get the current clipboard contents and their hash value
   CONTENTS="$(xsel -ob)"
+  CONTENTSHASH="$(echo -n "$CONTENTS" | sha256sum)"
 
   # Is there something in the clipboard?
   if [[ $CONTENTS != "" ]]; then
     # Is the clipboard the same as it was before?
-    if [[ $OLDCONTENTS == $CONTENTS ]]; then
+    # Use the has value since large amounts of clipboard content
+    #   were not being properly compared directly
+    if [[ $OLDCONTENTSHASH == $CONTENTSHASH ]]; then
       # Are we done counting down?
       if [[ $counter -le 1 ]]; then
         # Clear the clipboard
@@ -66,6 +70,7 @@ do
     else
       # Clipboard contents changed. Restart the countdown.
       echo "$dt : clipboard contents changed"
+      echo "Contents Hash: $CONTENTSHASH"
       counter=$cleartime
     fi
   fi
