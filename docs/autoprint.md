@@ -6,7 +6,7 @@ This could potentially be a security risk depending on your environment. Please 
 Huge thank you to 'whoami' for the excellent detailed instructions on setting up the printer qube itself. (link: https://forum.qubes-os.org/t/setup-a-wlan-lan-printer-ipp-everywhere/28741)
 
 ### Dependencies
-First and foremost: *this script has only been tested and confirmed to work using the printer qube setup designed and posted by 'whoami' as noted above.* If you're using any other printer qube setup then there is zero guarantee that this script will work as expected.
+First and foremost: **this script has only been tested and confirmed to work using the printer qube setup designed and posted by 'whoami' as noted above.** If you're using any other printer qube setup then there is zero guarantee that this script will work as expected.
 
 This script depends on inotify-tools and specifically the inotifywait function to watch for incoming files.
 
@@ -64,7 +64,6 @@ Deleted file /home/user/QubesIncoming/work/document1.pdf
 request id is Printer-Q-3 (1 file(s))
 Deleted file /home/user/QubesIncoming/work/document2.pdf
 ```
-Naturally you can verify that the clipboard actually cleared by attempting to paste once the "clipboard cleared" message is shown.
 
 If the logs do not appear as above, try the following:
 
