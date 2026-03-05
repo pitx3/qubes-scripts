@@ -32,7 +32,7 @@ Second, edit the /rw/config/rc.local file to include the following:
 ```
 This tells the system to run the script at startup. It will run as root, but that's fine. It also logs all output to the autoprint.log file for help when troubleshooting. Feel free to change this to /dev/null once you have everything up and running.
 
-From here you can either restart the qube or manually run the rc.local script to kick off the cbclear script in the background
+From here you can either restart the qube or manually run the rc.local script to kick off the autoprint script in the background
 ```
 sudo /rw/config/rc.local
 ```
@@ -88,6 +88,9 @@ While the rc.local script is executable, it's designed to be run as root.
 ```
 sudo /rw/config/rc.local
 ```
+
+#### Check any script changes
+If you changed the file extensions in the script to include things beyond PDF or TXT, check if those types of files will print directly from the printer qube. 
 
 #### Verify you created the printer qube correctly
 If you followed the instructions from 'whoami' to create your qube then go back to those and verify that you can print directly from your printer app qube. If you can't, then go back to the article and try again. 
